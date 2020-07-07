@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="font-weight-bold text-center">Task list</h1>
+
+<%= link_to 'Create new todo', new_todo_path, {class: "btn btn-info"} %>
+<table class="w-100 table m-3">
+  <thead>
+    <tr class="font-weight-bold row">
+      <th class="col-4">タスク</th>
+      <th class="col-4">編集</th>
+      <th class="col-4">削除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr class="row">
+        <td class="col-4"><%= todo.task %></td>
+        <td class="col-4"><%= link_to '編集', edit_todo_path(todo) , {class: "btn btn-success"}%></td>
+        <td class="col-4"><%= link_to '削除', todo,{ method: :delete,class: "btn btn-danger"} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
