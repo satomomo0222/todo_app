@@ -1,5 +1,5 @@
 # TODOアプリの制作
-■Ruby、Ruby on railsでTODOアプリ制作
+■Ruby、Ruby on railsでTODOアプリ制作  
 ・ログイン機能  
 ・投稿機能  
   
